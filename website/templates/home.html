@@ -1,0 +1,8 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<h1>Welcome to Oasis Health Clinic</h1>
+{% if current_user.is_authenticated is false %}
+<p>Login to book your appointment</p>
+{% elif current_user.is_authenticated is true%}
+<h4>Hello {{current_user.first_name}}</h4>
+{% endif %} {% endblock %}
